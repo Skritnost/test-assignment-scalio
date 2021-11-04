@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.fake-topbar {
+  width: 100%;
+  height: 50px;
+}
+
+.main {
+  display: flex;
+
+  &__fake-sidebar {
+    width: 100px;
+    height: 100%;
+  }
+
+  &__content {
+
+  }
+}
