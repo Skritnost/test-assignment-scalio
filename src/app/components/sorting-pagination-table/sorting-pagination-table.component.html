@@ -1,0 +1,44 @@
+<div [hidden]="!dataLength">
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    matSort
+    (matSortChange)="onSortData($event)"
+    matSortDisableClear>
+    <ng-container
+      *ngFor="let def of columnDef"
+      [matColumnDef]="def">
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+        {{ getColumnName(def) }}
+      </th>
+
+      <td mat-cell *matCellDef="let row">
+        <a *ngIf="row[def].isUrl; else textTpl"
+           target="_blank"
+           [href]="row[def].value">
+          {{ row[def].value }}
+        </a>
+
+        <ng-template #textTpl>
+          {{ row[def].value }}
+        </ng-template>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnDef"></tr>
+
+    <tr mat-row *matRowDef="let row; columns: columnDef;"></tr>
+  </table>
+
+  <mat-paginator
+    [length]="dataLength"
+    [pageSize]="pageSize">
+  </mat-paginator>
+</div>
+
+<div *ngIf="!dataLength">
+  No results
+</div>
