@@ -3,9 +3,9 @@ import { TestBed } from '@angular/core/testing';
 import { Observable, of } from 'rxjs';
 
 import { AppComponent } from './app.component';
-import { UserTableModel } from './components/models/userTableModel';
 import { StringFieldFormComponent } from './components/search-login/string-field-form.component';
 import { SortingPaginationTableComponent } from './components/sorting-pagination-table/sorting-pagination-table.component';
+import { UserTableModel } from './models/userTableModel';
 import { UsersApiServiceService } from './services/users-api-service.service';
 
 const USERS_MOCK: UserTableModel[] = [{

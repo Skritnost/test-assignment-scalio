@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import { BehaviorSubject, finalize, Observable, Subject, takeUntil } from 'rxjs';
 
-import { UserTableModel } from './components/models/userTableModel';
+import { UserTableModel } from './models/userTableModel';
 import { UsersApiServiceService } from './services/users-api-service.service';
 
 @Component({
