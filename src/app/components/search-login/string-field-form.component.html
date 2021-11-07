@@ -25,7 +25,16 @@
     type="submit"
     mat-flat-button
     color="primary">
-    Submit
+    <div class="string-field-form-button__text-container">
+      Submit
+
+      <mat-spinner
+        *ngIf="isLoading"
+        class="string-field-form-button__spinner"
+        diameter="20"
+        color="accent">
+      </mat-spinner>
+    </div>
   </button>
 </form>
 

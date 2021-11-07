@@ -6,6 +6,7 @@
   <div>
     <app-string-field-form
       fieldName="Login"
+      [isLoading]="isDataLoading$ | async"
       (onFormSubmitted)="onFormSubmitted($event)">
     </app-string-field-form>
 
