@@ -3,9 +3,16 @@
 <div class="main">
   <div class="main__fake-sidebar"></div>
 
- <app-string-field-form
-   fieldName="Login"
-   (onFormSubmitted)="onFormSubmitted($event)">
- </app-string-field-form>
+  <div>
+    <app-string-field-form
+      fieldName="Login"
+      (onFormSubmitted)="onFormSubmitted($event)">
+    </app-string-field-form>
+
+    <app-sorting-pagination-table
+      [data]="$any(tableData)"
+      [pageSize]="9">
+    </app-sorting-pagination-table>
+  </div>
 </div>
 
